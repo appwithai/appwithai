@@ -1,3 +1,36 @@
-<iframe name="Stack" src="http://stackoverflow.com/" width="740"
-        frameborder="0" scrolling="no" id="iframe"> ...
-</iframe>
+
+<!DOCTYPE html>
+<html>
+<head>
+<h4 style="color:#006400; font-size:24px;">
+Adjust width and height of iframe to fit 
+with content in it using JavaScript</h4>
+</head>
+<body>
+    <iframe style="width: 100%;border:3px solid black; 
+     " src="https://0910-103-76-241-230.ngrok.io/" id="Iframe"></iframe>
+    <!--iframe tag-->
+      
+    <script>
+        // Selecting the iframe element
+        var frame = document.getElementById("Iframe");
+          
+        // Adjusting the iframe height onload event
+        frame.onload = function()
+        // function execute while load the iframe
+        {
+          // set the height of the iframe as 
+          // the height of the iframe content
+          frame.style.height = 
+          frame.contentWindow.document.body.scrollHeight + 'px';
+           
+  
+         // set the width of the iframe as the 
+         // width of the iframe content
+         frame.style.width  = 
+          frame.contentWindow.document.body.scrollWidth+'px';
+              
+        }
+        </script>
+</body>
+</html>                                                        
